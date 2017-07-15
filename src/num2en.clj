@@ -28,9 +28,7 @@
                   16 "sixteen",
                   17 "seventeen",
                   18 "eighteen",
-                  19 "nineteen",
-                  20 "twenty"
-
+                  19 "nineteen"
                   }
          ntys {
                20 "twenty",
@@ -44,10 +42,10 @@
                }
 
          ]
-
      (cond
        (< n 20) (under20 n)
-       (< n 100) (ntys n)
+       (and (< n 100) (= (rem n 10) 0)) (ntys n)
+       (< n 100) (str (ntys (* (quot n 10) 10)) \- (under20 (rem n 10)))
        :else "TODO"
        )
      )

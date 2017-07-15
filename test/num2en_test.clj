@@ -37,6 +37,17 @@
   (is (= (num2en 90) "ninety"))
   )
 
+(deftest convert-two-digit-test
+  (is (= (num2en 21) "twenty-one"))
+  (is (= (num2en 32) "thirty-two"))
+  (is (= (num2en 43) "forty-three"))
+  (is (= (num2en 54) "fifty-four"))
+  (is (= (num2en 65) "sixty-five"))
+  (is (= (num2en 76) "seventy-six"))
+  (is (= (num2en 87) "eighty-seven"))
+  (is (= (num2en 98) "ninety-eight"))
+  )
+
 (deftest parse-int-test
   (is (= (parse-int "0") 0))
   (is (= (parse-int "987654567") 987654567))
