@@ -26,6 +26,17 @@
   (is (= (num2en 20) "twenty"))
   )
 
+(deftest convert-ntys-test
+  (is (= (num2en 20) "twenty"))
+  (is (= (num2en 30) "thirty"))
+  (is (= (num2en 40) "forty"))
+  (is (= (num2en 50) "fifty"))
+  (is (= (num2en 60) "sixty"))
+  (is (= (num2en 70) "seventy"))
+  (is (= (num2en 80) "eighty"))
+  (is (= (num2en 90) "ninety"))
+  )
+
 (deftest parse-int-test
   (is (= (parse-int "0") 0))
   (is (= (parse-int "987654567") 987654567))
