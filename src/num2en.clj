@@ -16,7 +16,7 @@
 )
 
 (defn parse-int [n]
-  (Integer/parseInt n))
+  (Integer. n))
 
 (defn -main
   "Represent the given number in english words"
