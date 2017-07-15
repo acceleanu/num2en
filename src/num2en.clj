@@ -8,8 +8,17 @@
 (defn num2en
   ([n]
     (cond
-      (= n 0) "zero"
-      (= n 1) "one"
+      (= n 0)  "zero"
+      (= n 1)  "one"
+      (= n 2)  "two"
+      (= n 3)  "three"
+      (= n 4)  "four"
+      (= n 5)  "five"
+      (= n 6)  "six"
+      (= n 7)  "seven"
+      (= n 8)  "eight"
+      (= n 9)  "nine"
+      (= n 10) "ten"
       :else "TODO"
     )
   )
