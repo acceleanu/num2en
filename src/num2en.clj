@@ -46,6 +46,8 @@
        (< n 20) (under20 n)
        (and (< n 100) (= (rem n 10) 0)) (ntys n)
        (< n 100) (str (ntys (* (quot n 10) 10)) \- (under20 (rem n 10)))
+       (and (< n 1000) (= (rem n 100) 0)) (str (under20 (quot n 100)) " hundred")
+       (< n 1000) (str (num2en (* 100 (quot n 100))) " and " (num2en (rem n 100))  )
        :else "TODO"
        )
      )

@@ -48,6 +48,30 @@
   (is (= (num2en 98) "ninety-eight"))
   )
 
+(deftest convert-hundreds-test
+  (is (= (num2en 100) "one hundred"))
+  (is (= (num2en 200) "two hundred"))
+  (is (= (num2en 300) "three hundred"))
+  (is (= (num2en 400) "four hundred"))
+  (is (= (num2en 500) "five hundred"))
+  (is (= (num2en 600) "six hundred"))
+  (is (= (num2en 700) "seven hundred"))
+  (is (= (num2en 800) "eight hundred"))
+  (is (= (num2en 900) "nine hundred"))
+  )
+
+(deftest convert-three-digit-test
+  (is (= (num2en 122) "one hundred and twenty-two"))
+  (is (= (num2en 233) "two hundred and thirty-three"))
+  (is (= (num2en 345) "three hundred and forty-five"))
+  (is (= (num2en 497) "four hundred and ninety-seven"))
+  (is (= (num2en 589) "five hundred and eighty-nine"))
+  (is (= (num2en 672) "six hundred and seventy-two"))
+  (is (= (num2en 763) "seven hundred and sixty-three"))
+  (is (= (num2en 892) "eight hundred and ninety-two"))
+  (is (= (num2en 999) "nine hundred and ninety-nine"))
+  )
+
 (deftest parse-int-test
   (is (= (parse-int "0") 0))
   (is (= (parse-int "987654567") 987654567))
