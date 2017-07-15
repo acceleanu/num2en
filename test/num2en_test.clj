@@ -2,10 +2,6 @@
   (:use clojure.test)
   (:use num2en))
 
-(deftest usage-test
-  (is (= (num2en) "Usage: num2en <number>"))
-)
-
 (deftest convert-numbers-0-19-test
   (is (= (num2en 0) "zero"))
   (is (= (num2en 1) "one"))
@@ -19,3 +15,9 @@
   ;(is (= (num2en 9) "nine"))
   ;(is (= (num2en 10) "ten"))
   )
+
+(deftest parse-int-test
+  (is (= (parse-int "0") 0))
+  (is (= (parse-int "987654567") 987654567))
+ )
+
