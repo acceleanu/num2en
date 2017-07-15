@@ -7,34 +7,53 @@
 
 (defn num2en
   ([n]
-    (cond
-      (= n 0)  "zero"
-      (= n 1)  "one"
-      (= n 2)  "two"
-      (= n 3)  "three"
-      (= n 4)  "four"
-      (= n 5)  "five"
-      (= n 6)  "six"
-      (= n 7)  "seven"
-      (= n 8)  "eight"
-      (= n 9)  "nine"
-      (= n 10) "ten"
-      :else "TODO"
+   (let [
+         under20 {
+                  0  "zero",
+                  1  "one",
+                  2  "two",
+                  3  "three",
+                  4  "four",
+                  5  "five",
+                  6  "six",
+                  7  "seven",
+                  8  "eight",
+                  9  "nine",
+                  10 "ten",
+                  11 "eleven",
+                  12 "twelve",
+                  13 "thirteen",
+                  14 "fourteen",
+                  15 "fifteen",
+                  16 "sixteen",
+                  17 "seventeen",
+                  18 "eighteen",
+                  19 "nineteen",
+                  20 "twenty"
+
+                  }
+
+         ]
+
+     (cond
+       (< n 20) (under20 n)
+       :else "TODO"
+       )
+     )
     )
   )
-)
 
 (defn parse-int [n]
   (Integer. n))
 
 (defn -main
   "Represent the given number in english words"
-  ( []
-    (println "Usage: num2en <number>")
-  )
-  ( [n & args]
-    (println
-       (num2en  (parse-int n))
+  ([]
+   (println "Usage: num2en <number>")
+    )
+  ([n & args]
+   (println
+     (num2en (parse-int n))
+     )
     )
   )
-)

@@ -14,6 +14,16 @@
   (is (= (num2en 8) "eight"))
   (is (= (num2en 9) "nine"))
   (is (= (num2en 10) "ten"))
+  (is (= (num2en 11) "eleven"))
+  (is (= (num2en 12) "twelve"))
+  (is (= (num2en 13) "thirteen"))
+  (is (= (num2en 14) "fourteen"))
+  (is (= (num2en 15) "fifteen"))
+  (is (= (num2en 16) "sixteen"))
+  (is (= (num2en 17) "seventeen"))
+  (is (= (num2en 18) "eighteen"))
+  (is (= (num2en 19) "nineteen"))
+  (is (= (num2en 20) "twenty"))
   )
 
 (deftest parse-int-test
