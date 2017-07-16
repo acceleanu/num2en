@@ -62,14 +62,21 @@
   "Represent the given number in english words"
   ([]
    (println "Usage: num2en <number>")
+   (System/exit 1)
     )
   ([n & args]
    (let [n (parse-int n)
          numberAsString (num2en n)
          ]
      (if (= numberAsString "TODO")
-       (println (str "Number " n " is not in [1..1000]"))
-       (println numberAsString)
+       (do
+         (println (str "Number " n " is not in [1..1000]"))
+         (System/exit 1)
+         )
+       (do
+         (println numberAsString)
+         (System/exit 0)
+         )
        )
      )
     )
