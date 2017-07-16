@@ -65,19 +65,26 @@
    (System/exit 1)
     )
   ([n & args]
-   (let [n (parse-int n)
-         numberAsString (num2en n)
-         ]
-     (if (= numberAsString "TODO")
-       (do
-         (println (str "Number " n " is not in [1..1000]"))
-         (System/exit 1)
-         )
-       (do
-         (println numberAsString)
-         (System/exit 0)
+   (try
+     (let [n (parse-int n)
+           numberAsString (num2en n)
+           ]
+       (if (= numberAsString "TODO")
+         (do
+           (println (str "Number " n " is not in [1..1000]"))
+           (System/exit 1)
+           )
+         (do
+           (println numberAsString)
+           (System/exit 0)
+           )
          )
        )
-     )
+     (catch NumberFormatException ex
+       (do
+         (println (str "Not a number: '" n "'"))
+         (System/exit 1)
+         )
+       ))
     )
   )

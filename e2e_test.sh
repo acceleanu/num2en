@@ -35,5 +35,6 @@ assertEquals "./num2en 1" 		0	"one"
 assertEquals "./num2en 777" 	0	"seven hundred and seventy-seven"
 assertEquals "./num2en 1001" 	1 	"Number 1001 is not in [1..1000]"
 assertEquals "./num2en -1" 		1 	"Number -1 is not in [1..1000]"
+assertEquals "./num2en invalid" 1 	"Not a number: 'invalid'"
 
 
