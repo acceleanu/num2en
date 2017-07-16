@@ -72,6 +72,15 @@
   (is (= (num2en 999) "nine hundred and ninety-nine"))
   )
 
+(deftest convert-thousands-test
+  (is (= (num2en 1000) "one thousand"))
+  )
+
+(deftest number-out-of-range-test
+  (is (= (num2en 1001) "Number 1001 is not in [1..1000]"))
+  (is (= (num2en -1) "Number -1 is not in [1..1000]"))
+  )
+
 (deftest parse-int-test
   (is (= (parse-int "0") 0))
   (is (= (parse-int "987654567") 987654567))
