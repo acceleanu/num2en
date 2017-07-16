@@ -1,4 +1,4 @@
-Convert a number into its representation in english words.
+Convert number into english text
 
 To build the project:
 ```
