@@ -77,8 +77,8 @@
   )
 
 (deftest number-out-of-range-test
-  (is (= (num2en 1001) "Number 1001 is not in [1..1000]"))
-  (is (= (num2en -1) "Number -1 is not in [1..1000]"))
+  (is (= (num2en 1001) "TODO"))
+  (is (= (num2en -1) "TODO"))
   )
 
 (deftest parse-int-test
