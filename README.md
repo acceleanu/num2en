@@ -1,4 +1,4 @@
-Convert number into english text
+# Convert number into english text
 
 To build the project:
 ```
@@ -9,5 +9,10 @@ To run the end to end test:
 
 ```
 ./e2e_test.sh
+```
+
+To run tests continuously:
+```
+lein midje :autotest
 ```
 

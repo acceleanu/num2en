@@ -1,5 +1,5 @@
 #!/bin/bash
 
-java -jar target/NumberToEnglish-1.0-SNAPSHOT-standalone.jar "$@"
+java -jar target/uberjar/NumberToEnglish-1.0-SNAPSHOT-standalone.jar "$@"
 
 
